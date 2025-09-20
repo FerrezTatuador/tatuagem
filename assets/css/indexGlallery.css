@@ -289,3 +289,13 @@ body {
   color: #bbb;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
+
+.dev-link {
+  color: inherit;
+  /* herda a cor do footer */
+}
+
+.dev-link:hover {
+  text-decoration: none;
+  /* opcional: aparece sublinhado só no hover */
+}
