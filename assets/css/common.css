@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/BebasNeue/BebasNeue-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/BebasNeue/BebasNeue-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===================== AURA ===================== */
+.aura-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 5rem 0;
+  margin-top: 3.75rem;
+}
+
+.aura-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 350;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2.75rem;
+  color: #f5f5f5;
+  -webkit-text-stroke: 3.5px;
+  margin-left: 10px;
+}
+
+.aura-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.0625rem;
+  line-height: 1.6em;
+  color: #d6d6d6;
+  margin-left: 15px;
+}
+
+/* ===================== CONTATOS ===================== */
+.contatos-items {
+  max-width: 60.4rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  text-transform: uppercase;
+  margin-top: 5%;
+  margin-bottom: 0;
+  margin-left: 240px;
+}
+
+.contatos-items p {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.contatos-items div:last-child {
+  justify-self: end;
+}
+
+.contatos-items .icon {
+  color: #000;
+  width: 1.50rem;
+  height: 1.50rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 50%;
+  padding: 0.3125rem;
+  box-sizing: content-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 2.3rem;
+}
+
+.contatos-items .icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+address {
+  font-style: normal;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #D6D6D6;
+  margin-bottom: 2rem;
+}
+
+.email,
+.contato-link {
+  text-transform: none;
+  color: #f5f5f5;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contato-link:hover {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+/* ===================== FOOTER ===================== */
+.site-footer {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  text-align: center;
+  color: #bbb;
+}
+
+.footer-spacer {
+    height: 4rem;
+  }
+
+.dev-link {
+  color: inherit;
+  /* herda a cor do footer */
+}
+
+.dev-link:hover {
+  text-decoration: none;
+}
+
+/* ===================== TABLET ===================== */
+@media (max-width: 1023px) {
+  .aura-section {
+    padding: 5rem 1rem;
+  }
+
+  .aura-title {
+    font-size: 3.75rem;
+    -webkit-text-stroke: 2.5px;
+    letter-spacing: 0.4rem;
+  }
+
+  .contatos-items {
+    margin-left: 60px;
+  }
+
+}
+
+/* ===================== MOBA ===================== */
+@media (max-width: 767px) {
+  .aura-section {
+    padding: 3rem 1rem;
+  }
+
+  .aura-title {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1.5px;
+    letter-spacing: 0.25rem;
+  }
+
+  .contatos-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-top: 4.2rem;
+  }
+
+  .contatos-items>div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contatos-items div:last-child {
+    justify-self: center;
+    margin-right: 0;
+  }
+
+}

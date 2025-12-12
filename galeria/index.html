@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self';
+    style-src 'self' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    object-src 'none';
+    frame-src https://www.google.com;
+    base-uri 'self';
+    form-action 'none';
+  ">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+  <title>Galeria de Tatuagens | Portfólio Tony Félix</title>
+  <meta name="description" content="Portfólio de Tony Félix - Galeria de tatuagens realistas, geométricas e autorais.">
+  <link rel="canonical" href="https://tony-felix.github.io/tatuagem/galeria/">
+
+  <link rel="stylesheet" href="../assets/css/gallery.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body class="galeria-page">
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-center">
+        <a href="../">HOME</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      
+      <div class="iniciarConversaGaleria">
+        <a href="https://wa.me/5521979881897" target="_blank" class="galleryBtn">
+          INICIAR CONVERSA
+        </a>
+      </div>
+    </section>
+
+    <!-- GALERIA DE IMAGENS -->
+    <section class="galeria-section galeria-ajustes" id="galeria">
+      <div class="galeria-grid">
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card1.jpg" alt="tatuagem floral sendo feita no braço por um tatuador"
+            onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card2.jpg" alt="Penas de homem totalmente tatuadas com os temas: flores e espaço."
+            onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card3.jpg"
+            alt="Tatuador fazendo um traço em uma tatuagem onde um homem tem rabo de cobra."
+            onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card4.jpg" alt="Tatuando braço de sujeito com formas geométricas."
+            onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card5.jpg" alt="Braço tatuado com um rosto de um japonês e um dragão."
+            onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card6.jpg" alt="riva sentada na cadeira com os braços tatuados estilo floral."
+            onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card7.jpg"
+            alt="mulher tapando os olhos e mostrando diversas tatuagens pequenas em preto e cinza."
+            onerror="this.style.visibility='hidden'">
+        </figure>
+        <figure class="galeria-item">
+          <img src="../assets/gallery/card8.jpg" alt="mulher de braço cruzado mostrando tatuagem floral delicada."
+            onerror="this.style.visibility='hidden'">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <section class="lightbox" id="lightbox" role="dialog">
+      <span class="close-btn" role="button" tabindex="0" id="closeBtn" aria-label="Fechar lightbox">&times;</span>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <span class="arrow-lightbox lightbox-left" role="button" tabindex="0" id="prevArrowLight"
+        aria-label="Imagem anterior">&#10094;</span>
+      <span class="arrow-lightbox lightbox-right" role="button" tabindex="0" id="nextArrowLight"
+        aria-label="Próxima imagem">&#10095;</span>
+    </section>
+
+    <section class="iniciarConversaGaleria" id="entreEmContato">
+      <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer" class="galleryBtn">
+        ENTRE EM CONTATO
+      </a>
+    </section>
+
+    <!-- CARROSSEL -->
+    <template id="carrosselTemplate">
+      <section class="carrossel">
+        <div class="carrossel-track">
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/5.webp" alt="Imagem 1" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card9.webp" alt="Imagem 2" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card10.webp" alt="Imagem 3" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card11.webp" alt="Imagem 4" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card12.webp" alt="Imagem 5" loading="lazy" />
+          </figure>
+          <figure class="carrossel-item">
+            <img src="../assets/gallery/card13.webp" alt="Imagem 6" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="carrossel-controls">
+          <button id="toggleDirection" aria-label="Inverter ou retomar rotação do carrossel" aria-pressed="true">
+            <img src="../assets/icons/icon-girar.svg" alt="Girar">
+          </button>
+        </div>
+      </section>
+    </template>
+
+    <section class="arrowSection">
+      <span class="arrow left" id="prevArrow" role="button" aria-label="Anterior">&#10094;</span>
+      <span class="arrow right" id="nextArrow" role="button" aria-label="Próximo">&#10095;</span>
+    </section>
+
+
+    <!-- CONTATOS -->
+    <section class="aura-section" aria-labelledby="contato">
+      <div class="aura-card">
+        <h2 id="contato" class="aura-title">CONTATOS</h2>
+        <p class="aura-sub">Entre em contato e agende sua sessão</p>
+      </div>
+
+      <div class="contatos-items">
+        <div>
+          <h3>Local</h3>
+          <address>
+            Av. Isabel 29 - Santa Cruz<br>
+            Rio de Janeiro - RJ 23510-151
+          </address>
+          <h3>Horários</h3>
+          <p>9H ÁS 22H | Segunda - Sábado</p>
+        </div>
+
+        <div>
+          <h3>Mensagens</h3>
+          <p>
+            <a href="mailto:toni.felix.tattoo@gmail.com" class="contato-link">EMAIL</a>
+            <br>
+            <span class="email">toni.felix.tattoo@gmail.com</span>
+          </p>
+          <p>
+            <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer"
+              class="contato-link">WHATSAPP</a>
+            <br>
+            21 97988-1897
+          </p>
+        </div>
+
+        <div>
+          <h3>Seguir</h3>
+          <a href="https://www.instagram.com/tonyfelixtatuador/" rel="noopener noreferrer" target="_blank"
+            aria-label="Siga no Instagram" class="contato-link">
+            <img src="../assets/icons/icon-instagram.svg" alt="Instagram" class="icon">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-spacer site-footer">
+    <p>© <span id="year">2025</span> Tony Félix Tattoo — Todos os direitos reservados. | Desenvolvido por <a
+        class="dev-link" href="https://github.com/Tony-Felix" target="_blank">Tony Félix</a></p>
+  </footer>
+
+  <!-- HAMBURGUER -->
+  <script src="../assets/js/menuHamburguer.js" defer></script>
+
+  <!-- LIGHTBOX -->
+  <script src="../assets/js/lightBox.js" defer></script>
+
+  <!-- CARROSSEL -->
+  <script src="../assets/js/carrossel.js" defer></script>
+</body>
+
+</html>

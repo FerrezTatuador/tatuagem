@@ -4,41 +4,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ferrez Tatuador</title>
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self';
+  style-src 'self' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data:;
+  connect-src 'self';
+  object-src 'none';
+  frame-src https://www.google.com;
+  base-uri 'self';
+  form-action 'none';
+">
 
-  <!-- CSS principal -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+  <title>Marcos Ferréz Tatuador | Estúdio de Tatuagem no Rio de Janeiro</title>
+  <meta name="description"
+    content="Marcos Ferréz Tatuador — Estúdio de tatuagem no Rio de Janeiro. Conheça o método A.U.R.A. e descubra sua tatuagem ideal com arte, tecnologia e inspiração.">
+  <link rel="canonical" href="https://tony-felix.github.io/tatuagem/" />
+
   <link rel="stylesheet" href="assets/css/headerMain.css">
-  <link rel="stylesheet" href="assets/css/indexGlallery.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/componentesResponsivo.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 
-  <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono&family=Space+Grotesk&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
+<body class="home">
   <header class="site-header">
-    <nav class="nav">
-      <!-- Esquerda -->
+    <nav class="nav" role="navigation" aria-label="Menu principal">
       <div class="nav-left">
-        <button class="hamburger">☰</button>
+        <button class="hamburger" aria-label="Abrir menu de navegação">☰</button>
         <ul class="nav-list">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="gallery.html">GALERIA</a></li>
-          <li><a href="https://wa.me/5521979881897" target="_blank">AGENDAMENTO</a></li>
+          <li><a href="#home" aria-current="page">HOME</a></li>
+          <li><a href="#galeria">GALERIA</a></li>
+          <li><a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer">AGENDAMENTO</a></li>
         </ul>
       </div>
 
-      <!-- Centro -->
-      <div class="nav-center">
-        FERREZ
-      </div>
-
-      <!-- Direita -->
       <div class="nav-right">
         <ul class="nav-list">
           <li><a href="#local">LOCALIZAÇÕES</a></li>
@@ -51,72 +61,158 @@
 
   <main>
     <!-- HERO -->
-    <section id="home" class="hero" aria-label="Seção principal">
-      <div class="hero-bg" aria-hidden="true"></div>
+    <section id="home" class="hero" aria-label="Seção principal de destaque">
+      <picture>
+        <source media="(min-width:769px)" srcset="assets/images/hero.jpeg" type="image/webp">
+        <source media="(min-width:481px)" srcset="assets/images/hero-1200.webp" type="image/webp">
+        <source media="(max-width:480px)" srcset="assets/images/hero-768.webp" type="image/webp">
+        <!-- fallback JPEG -->
+        <img class="hero-bg" src="assets/images/hero.jpeg" alt="Banner principal do site">
+      </picture>
+
       <div class="hero-content">
-        <h1 class="hero-title">FERREZ TATUADOR</h1>
+        <h1 class="hero-title-home">DARK ORNAMENTO <br>
+          BLACK WORK <br></h1>
+        <p>Marcos Ferréz</p>
       </div>
-      <span class="hero-line" aria-hidden="true"></span>
     </section>
 
     <!-- AURA -->
     <section class="aura-section">
       <div class="consulta-wrap">
-        <a href="https://wa.me/5521979881897" target="_blank" class="consulta-btn">
+        <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer" class="consulta-btn">
           INICIAR CONVERSA
         </a>
       </div>
     </section>
 
-    <!-- SOBRE / FOTO E FORMAÇÃO -->
+    <!-- SOBRE -->
     <section id="sobre" class="sobre-section">
       <div class="sobre-inner">
-        <div class="foto">
-          <!-- substitua o src pela sua foto -->
-          <img src="assets/images/minhaFoto.jpeg" alt="Foto de Ferrez tatuador" />
-        </div>
+        <figure class="foto">
+          <img src="assets/images/minhaFoto.jpg" alt="Retrato de Tony Félix" loading="lazy" />
+        </figure>
         <div class="formacao">
-          <h3>FERREZ</h3>
+          <h2>Marcos Ferréz</h2>
           <p>
-            EX: Tatuador profissional desde 2018, especializado em tatuagens realistas e personalizadas. Com um olhar atento.......
-            
-            <a href="aura.html" class="saiba-mais">Saiba mais</a>
+            Marcos Ferréz é um tatuador e ilustrador que atua no Rio de Janeiro, conhecido por seu domínio técnico e
+            pela construção de uma identidade visual própria. Ele é especializado nos estilos dark ornamento e
+            blackwork, criando trabalhos autorais que misturam estética sombria, detalhamento minucioso e composições
+            pensadas para valorizar o corpo de cada cliente. Seu processo criativo é focado em desenvolver projetos
+            exclusivos, sempre levando em consideração anatomia, fluxo das linhas e a intenção artística por trás de
+            cada desenho. Marcos combina elementos ornamentais, formas marcantes e contrastes intensos, resultando em
+            tatuagens que se destacam pela personalidade e força visual. Dark ornamento é um estilo que une elementos
+            decorativos — como arabescos, padrões geométricos e formas orgânicas — a uma atmosfera mais sombria, usando
+            sombras profundas e composições densas para criar impacto visual. Já o blackwork é um estilo baseado no uso
+            predominante de tinta preta, explorando áreas chapadas, linhas fortes, contraste extremo e texturas para
+            criar desenhos potentes e expressivos. Com um olhar artístico apurado e dedicação à originalidade, Marcos
+            Ferréz desenvolve tatuagens que vão além do estético, oferecendo peças únicas, autorais e carregadas de
+            identidade. Saiba mais
+            <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer" class="saiba-mais">Saiba
+              mais</a>
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="aura-section">
+      <div class="localizacao-card">
+        <h2 class="aura-title">GALERIA</h2>
+      </div>
+
+      <div class="consulta-wrap">
+        <a href="galeria/" class="consulta-btn">
+          GALERIA EXCLUSIVA
+        </a>
+      </div>
+    </section>
+
+    <section class="galeria-section-home ajuste-imgagens">
+      <div class="galeria-grid-home">
+        <figure class="galeria-item-home">
+          <a href="galeria/" aria-label="Ver mais tatuagens semelhantes a gato em aquarela colorida">
+            <img src="assets/gallery/card9.webp"
+              alt="Gato em aquarela com pelagem rosa, roxa e azul, olhos azuis brilhantes — arte colorida e abstrata para inspiração em tatuagem.">
+          </a>
+        </figure>
+
+        <figure class="galeria-item-home">
+          <a href="galeria/" aria-label="Ver mais tatuagens de raposa em aquarela e geométricas">
+            <img src="assets/gallery/card10.webp"
+              alt="Tatuagem de raposa em aquarela e estilo geométrico no antebraço, com pelagem laranja e vermelha e olhos azuis.">
+          </a>
+        </figure>
+
+        <figure class="galeria-item-home">
+          <a href="galeria/" aria-label="Ver mais tatuagens de lobo em aquarela com flores e floresta">
+            <img src="assets/gallery/card11.webp"
+              alt="Tatuagem de lobo em aquarela no antebraço, com pelagem rosa, roxa e azul e olhos azuis, cercada por floresta de pinheiros e flores.">
+          </a>
+        </figure>
+
+        <figure class="galeria-item-home">
+          <a href="galeria/" aria-label="Ver mais tatuagens florais em preto e cinza">
+            <img src="assets/gallery/card12.webp"
+              alt="Tatuagem floral em preto e cinza na coxa e quadril, com rosas realistas e folhagens em cascata — arte delicada e inspiradora para tatuagem.">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- ASSISTENTE VIRTUAL -->
+    <section class="aura-section" aria-labelledby="ia-title">
+      <div class="localizacao-card">
+        <h2 class="aura-title">TATI <span class="quebra"> INTELIGÊNCIA ARTIFICIAL</h2>
+        <p class="aura-sub">Fale com a Tati e descubra sua tatuagem ideal</p>
+      </div>
+
+      <div class="consulta-wrap">
+        <a href="https://chatgpt.com/share/68e17e2e-79bc-800a-93a2-469a0e122d42" class="consulta-btn"
+          aria-label="Falar com Tati e descobrir sua tatuagem ideal">
+          DESCOBRIR TATUAGEM
+        </a>
       </div>
     </section>
 
     <!-- LOCALIZAÇÃO -->
-    <section class="localizacao-section">
+    <section class="localizacao-section" aria-labelledby="localizacao-title">
       <div class="localizacao-card">
-        <h2 class="localizacao-title">LOCALIZAÇÃO</h2>
+        <h2 class="localizacao-title" id="localizacao-title">LOCALIZAÇÃO</h2>
       </div>
 
-      <div class="map-wrap">
-        <div id="local"></div>
+      <figure class="map-wrap">
+        <span id="local"></span>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXXXXXXX!2d-43.XXXXXX!3d-22.XXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x...ADDRESS_ID...!2sAv.%20Isabel%2029,%20Santa%20Cruz,%20Rio%20de%20Janeiro!5e0!3m2!1spt-BR!2sbr!4vxxxxxxxxxxxxx"
-          width="100%" height="100%" style="border:0; filter: grayscale(100%) contrast(70%);" allowfullscreen=""
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa com a localização: Av. Isabel, 29 - Santa Cruz, Rio de Janeiro">
         </iframe>
+        <figcaption>
+          Mapa da localização: Av. Isabel, 29 - Santa Cruz, Rio de Janeiro
+        </figcaption>
+      </figure>
 
-      </div>
+      <address class="endereco">
+        Av. Isabel, 29 - Santa Cruz
+      </address>
     </section>
 
     <!-- CONTATOS -->
-    <section class="aura-section">
-      <div id="contatos" class="aura-card" aria-hidden="true">
+    <section class="aura-section" aria-labelledby="contato">
+      <div class="localizacao-card">
         <h2 id="contato" class="aura-title">CONTATOS</h2>
         <p class="aura-sub">Entre em contato e agende sua sessão</p>
       </div>
 
-      <div class="faq-item contatos-items">
+      <div class="contatos-items">
         <div>
           <h3>Local</h3>
-          <p>
-            Av. Isabel 29 - Santa Cruz <br>
+          <address>
+            Av. Isabel 29 - Santa Cruz<br>
             Rio de Janeiro - RJ 23510-151
-          </p>
+          </address>
           <h3>Horários</h3>
           <p>9H ÁS 22H | Segunda - Sábado</p>
         </div>
@@ -124,12 +220,13 @@
         <div>
           <h3>Mensagens</h3>
           <p>
-            <a href="mailto:ferreztatuador@gmail.com" class="contato-link">EMAIL</a>
+            <a href="mailto:toni.felix.tattoo@gmail.com" class="contato-link">EMAIL</a>
             <br>
-            <span class="email">ferreztatuador@gmail.com</span>
+            <span class="email">toni.felix.tattoo@gmail.com</span>
           </p>
           <p>
-            <a href="https://wa.me/5521979881897" target="_blank" class="contato-link">WHATSAPP</a>
+            <a href="https://wa.me/5521979881897" target="_blank" rel="noopener noreferrer"
+              class="contato-link">WHATSAPP</a>
             <br>
             21 97988-1897
           </p>
@@ -137,113 +234,109 @@
 
         <div>
           <h3>Seguir</h3>
-          <a href="https://instagram.com/seuPerfil" target="_blank" class="contato-link">
-            <img src="assets/images/instagram.svg" alt="Instagram" class="icon">
+          <a href="https://www.instagram.com/tonyfelixtatuador/" rel="noopener noreferrer" target="_blank"
+            aria-label="Siga no Instagram" class="contato-link">
+            <img src="assets/icons/icon-instagram.svg" alt="Instagram" class="icon">
           </a>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="aura-section faq-section">
-      <div class="aura-card" aria-hidden="true">
+    <section class="aura-section faq-section" aria-labelledby="faq">
+      <div class="localizacao-card">
         <h2 id="faq" class="aura-title">FAQ</h2>
         <p class="aura-sub">Dúvidas Frequentes</p>
       </div>
 
-      <div class="faq-content faq-content-mobile">
+      <dl class="faq-content faq-content-mobile">
         <div class="faq-item">
-          <h3>Como faço para marcar um horário?</h3>
-          <p>Você pode ligar para nós pelo WhatsApp: 21 97988-1897, ou enviar um e-mail detalhado para
+          <dt>Como faço para marcar um horário?</dt>
+          <dd>Você pode ligar para nós pelo WhatsApp: 21 97988-1897, ou enviar um e-mail detalhado para
             toni.felix.tattoo@gmail.com, com a descrição do
             desenho, algumas referências de fotos, caso já tenha uma ideia inicial. Isso nos permite processar seu
-            pedido com mais rapidez e eficiência.</p>
+            pedido com mais rapidez e eficiência.</dd>
         </div>
 
         <div class="faq-item">
-          <h3>Qual a idade mínima para fazer uma tatuagem?</h3>
-          <p>No Brasil, a legislação não permite que menores de 18 anos façam tatuagem sem o consentimento dos pais ou
+          <dt>Qual a idade mínima para fazer uma tatuagem?</dt>
+          <dd>No Brasil, a legislação não permite que menores de 18 anos façam tatuagem sem o consentimento dos pais ou
             responsáveis legais. De acordo com o Estatuto da Criança e do Adolescente (Lei nº 8.069/1990), é obrigatório
             apresentar documento oficial com foto e, no caso de menores, uma autorização assinada pelos responsáveis.
             Cada estúdio pode adotar políticas ainda mais rígidas, priorizando sempre a segurança e o cumprimento da
-            lei.</p>
+            lei.</dd>
         </div>
 
         <div class="faq-item">
-          <h3>Quanto custa uma tatuagem?</h3>
-          <p>Depende do artista, mas todas as tatuagens começam a partir de R$ 180. O preço final varia de acordo com o
+          <dt>Quanto custa uma tatuagem?</dt>
+          <dd>Depende do artista, mas todas as tatuagens começam a partir de R$ 180. O preço final varia de acordo com o
             tamanho, nível de detalhe do desenho, local do corpo e o artista escolhido. Alguns artistas têm cobrança
             mínima
-            por hora, que também varia.</p>
+            por hora, que também varia.</dd>
         </div>
 
         <div class="faq-item">
-          <h3>Como posso obter um orçamento?</h3>
-          <p>A melhor forma de ter uma estimativa precisa é marcando uma consulta gratuita com o artista de sua escolha.
+          <dt>Como posso obter um orçamento?</dt>
+          <dd>A melhor forma de ter uma estimativa precisa é marcando uma consulta gratuita com o artista de sua
+            escolha.
             Se não puder ser presencial, pode ser feita por e-mail detalhado: toni.felix.tattoo@gmail.com, ou WhatsApp:
             21 97988-1897. Para fazer um orçamento da sua tatuagem, precisamos saber o tema, tamanho, localização no
-            corpo e nível de detalhe.</p>
+            corpo e nível de detalhe.</dd>
         </div>
 
         <div class="faq-item break-column">
-          <h3>Tatuar Dói?</h3>
-          <p>Sim! Mas de um jeito bom. Seu cérebro libera endorfinas quando você sente dor e seu corpo adora endorfinas.
-            Então sim, dói, mas você acaba até gostando da experiência.</p>
+          <dt>Tatuar Dói?</dt>
+          <dd>Sim! Mas de um jeito bom. Seu cérebro libera endorfinas quando você sente dor e seu corpo adora
+            endorfinas.
+            Então sim, dói, mas você acaba até gostando da experiência.</dd>
         </div>
 
         <div class="faq-item">
-          <h3>Quanto tempo leva para uma tatuagem cicatrizar?</h3>
-          <p>A cicatrização inicial leva de 2 a 3 semanas, mas a pele demora meses para se regenerar completamente.</p>
+          <dt>Quanto tempo leva para uma tatuagem cicatrizar?</dt>
+          <dd>A cicatrização inicial leva de 2 a 3 semanas, mas a pele demora meses para se regenerar completamente.
+          </dd>
         </div>
 
         <div class="faq-item">
-          <h3>Como devo cuidar da minha nova tatuagem?</h3>
-          <p>Cada estúdio tem suas recomendações próprias de cuidados. Após fazer a tatuagem, você receberá um cartão
-            com instruções específicas.</p>
+          <dt>Como devo cuidar da minha nova tatuagem?</dt>
+          <dd>Cada estúdio tem suas recomendações próprias de cuidados. Após fazer a tatuagem, você receberá um cartão
+            com instruções específicas.</dd>
         </div>
 
         <div class="faq-item">
-          <h3>Quais formas de pagamento são aceitas?</h3>
-          <p>Aceitamos dinheiro e pix.</p>
+          <dt>Quais formas de pagamento são aceitas?</dt>
+          <dd>Aceitamos dinheiro e pix.</dd>
         </div>
 
         <div class="faq-item">
-          <h3>Preciso deixar um sinal para marcar um horário?</h3>
-          <p>Sim. É necessário um sinal de 25% do valor para confirmar o agendamento. Os sinais não são reembolsáveis
+          <dt>Preciso deixar um sinal para marcar um horário?</dt>
+          <dd>Sim. É necessário um sinal de 25% do valor para confirmar o agendamento. Os sinais não são reembolsáveis
             nem
-            transferíveis e serão descontados do preço final ou da última sessão da sua tatuagem.</p>
+            transferíveis e serão descontados do preço final ou da última sessão da sua tatuagem.</dd>
         </div>
 
         <div class="faq-item">
-          <h3>Como devo me preparar para a tatuagem?</h3>
-          <p>Recomendamos que você se alimente bem antes da sessão e mantenha-se hidratado. Se começar a se sentir
+          <dt>Como devo me preparar para a tatuagem?</dt>
+          <dd>Recomendamos que você se alimente bem antes da sessão e mantenha-se hidratado. Se começar a se sentir
             fraco,
-            tome algo doce – o açúcar ajuda bastante. Também é melhor não exagerar na noite anterior. Cuide-se.</p>
+            tome algo doce – o açúcar ajuda bastante. Também é melhor não exagerar na noite anterior. Cuide-se.</dd>
         </div>
-      </div>
+      </dl>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-   <div class="footer-spacer">
-     <footer class="site-footer">
-       <p>© <span id="year">2025</span> Ferrez Tatuador — Todos os direitos reservados. | Desenvolvido por <a class="dev-link" href="https://github.com/Tony-Felix" target="_blank">Tony Félix</a></p>
-     </footer>
-   </div>
+  <footer class="footer-spacer site-footer">
+    <p>© <span id="year">2025</span> Tony Félix Tattoo — Todos os direitos reservados. | Desenvolvido por <a
+        class="dev-link" href="https://github.com/Tony-Felix" target="_blank">Tony Félix</a></p>
+  </footer>
 
   <!-- PARALLAX -->
-  <script>
-    if (window.innerWidth > 768) {
-      const script = document.createElement('script');
-      script.src = 'assets/js/heroParallax.js';
-      script.defer = true;
-      document.body.appendChild(script);
-    }
-  </script>
+  <script src="assets/js/heroParallax.js" defer></script>
 
   <!-- HAMBURGUER -->
-  <script src="assets/js/menuHamburguer.js"></script>
+  <script src="assets/js/menuHamburguer.js" defer></script>
 
 </body>
 
