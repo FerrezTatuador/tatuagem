@@ -44,6 +44,23 @@ body {
   padding: 0.3rem 3.125rem;
 }
 
+.galeryToHome {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block; /* necessário para o translate */
+  transition: 
+    text-decoration 0.2s ease,
+    font-weight 0.2s ease,
+    transform 0.2s ease;
+}
+
+.galeryToHome:hover {
+  text-decoration: underline;
+  transform: scale(1.06);
+}
+
 .hero {
   min-height: 100vh;
   min-width: 47vh;
@@ -111,7 +128,7 @@ body.galeria-page .hero-title {
   background-color: #151515;
   color: #ffffff;
   border: 2px solid #ffffff;
-  border-radius: 0;
+  border-radius: 0.5rem;
   padding: 0.6875rem 2.25rem;
   /* antes 11px 36px */
   cursor: pointer;
@@ -260,6 +277,7 @@ body.galeria-page .hero-title {
 
 .galeria-ajustes {
   margin-left: -3px;
+  margin-top: 8%;
 }
 
 /* ===========================
@@ -420,6 +438,34 @@ body.galeria-page .hero-title {
   transform: scale(1.2) translateY(-25px);
 }
 
+/* ===== CONTATOS ====== */
+.localizacao-section {
+  padding: 5rem 0;
+}
+
+.localizacao-card {
+  background: #121212;
+  color: #f5f5f5;
+  width: 100%;
+  max-width: none;
+  border-radius: 0;
+  padding: 6.875rem 0;
+  text-align: center;
+  margin-bottom: 6.125rem;
+  margin-top: -1.0rem;
+}
+
+.localizacao-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 350;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 0.5rem;
+  color: #f5f5f5;
+  -webkit-text-stroke: 3.5px;
+}
+
 /* ===================== TABLET — GALERIA ===================== */
 @media (max-width: 1023px) {
   .hero-title {
@@ -428,11 +474,6 @@ body.galeria-page .hero-title {
   
   .arrow {
     font-size: 1.2rem;
-  }
-
-  .aura-section {
-    padding: 0 0 !important;
-    margin-top: 0 !important;
   }
 }
 
