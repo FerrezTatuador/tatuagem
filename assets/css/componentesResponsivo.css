@@ -180,6 +180,8 @@
   text-align: center;
   margin-bottom: 6.125rem;
   margin-top: -2.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .localizacao-title {

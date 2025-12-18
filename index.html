@@ -61,7 +61,7 @@
 
   <main>
     <!-- HERO -->
-    <section id="home" class="hero" aria-label="Seção principal de destaque">
+    <section id="home" class="hero parallax-section" aria-label="Seção principal de destaque">
       <picture>
         <source media="(min-width:769px)" srcset="assets/images/hero.jpeg" type="image/webp">
         <source media="(min-width:481px)" srcset="assets/images/hero-1200.webp" type="image/webp">
@@ -95,20 +95,23 @@
         <div class="formacao">
           <h2>Marcos Ferréz</h2>
           <p>
-            Marcos Ferréz é um tatuador e ilustrador que atua no Rio de Janeiro, conhecido por seu domínio técnico e
-            pela construção de uma identidade visual própria. Ele é especializado nos estilos dark ornamento e
-            blackwork, criando trabalhos autorais que misturam estética sombria, detalhamento minucioso e composições
-            pensadas para valorizar o corpo de cada cliente. Seu processo criativo é focado em desenvolver projetos
-            exclusivos, sempre levando em consideração anatomia, fluxo das linhas e a intenção artística por trás de
-            cada desenho. Marcos combina elementos ornamentais, formas marcantes e contrastes intensos, resultando em
-            tatuagens que se destacam pela personalidade e força visual. Dark ornamento é um estilo que une elementos
-            decorativos — como arabescos, padrões geométricos e formas orgânicas — a uma atmosfera mais sombria, usando
-            sombras profundas e composições densas para criar impacto visual. Já o blackwork é um estilo baseado no uso
-            predominante de tinta preta, explorando áreas chapadas, linhas fortes, contraste extremo e texturas para
-            criar desenhos potentes e expressivos. Com um olhar artístico apurado e dedicação à originalidade, Marcos
-            Ferréz desenvolve tatuagens que vão além do estético, oferecendo peças únicas, autorais e carregadas de
-            identidade. Saiba mais
-            <a href="https://www.instagram.com/ferreztatuador/" target="_blank" rel="noopener noreferrer" class="saiba-mais">Saiba
+            Marcos Ferréz é tatuador e ilustrador no Rio de Janeiro, um artista que transforma pele em narrativa. Seu
+            traço é firme, sua visão singular: ele constrói universos visuais que respiram identidade própria.
+
+            Especialista em dark ornamento e blackwork ilustrativo, Marcos cria obras que misturam a beleza da sombra
+            com o rigor do detalhe. Cada projeto nasce exclusivo, pensado para dialogar com a anatomia, seguir o fluxo
+            das linhas e revelar a intenção artística que pulsa por trás de cada desenho.
+
+            No dark ornamento, arabescos, padrões geométricos e formas orgânicas se entrelaçam em composições densas,
+            onde a sombra é protagonista e o impacto visual é inevitável. Já o blackwork ilustrativo traz a beleza
+            estética de imagens detalhadas feitas com tinta preta e sombreamentos minuciosos, explorando contrastes e
+            texturas para criar desenhos potentes e expressivos.
+
+            Com olhar apurado e devoção à originalidade, Marcos Ferréz não cria apenas tatuagens — ele dá vida a peças
+            únicas, autorais, carregadas de identidade. São marcas que transcendem o estético e se tornam símbolos de
+            personalidade, força e poesia gravada na pele.
+            <a href="https://www.instagram.com/ferreztatuador/" target="_blank" rel="noopener noreferrer"
+              class="saiba-mais">Saiba
               mais</a>
           </p>
         </div>
@@ -117,7 +120,14 @@
 
     <!-- GALERIA -->
     <section class="aura-section">
-      <div class="localizacao-card">
+      <div class="localizacao-card parallax-section">
+        <picture>
+          <source media="(min-width:769px)" srcset="assets/images/hero.jpeg" type="image/webp">
+          <source media="(min-width:481px)" srcset="assets/images/hero-1200.webp" type="image/webp">
+          <source media="(max-width:480px)" srcset="assets/images/hero-768.webp" type="image/webp">
+          <!-- fallback JPEG -->
+          <img class="hero-bg" src="assets/images/hero.jpeg" alt="Banner principal do site">
+        </picture>
         <h2 class="aura-title">GALERIA</h2>
       </div>
 
@@ -132,29 +142,25 @@
       <div class="galeria-grid-home">
         <figure class="galeria-item-home">
           <a href="galeria/" aria-label="Ver mais tatuagens semelhantes a gato em aquarela colorida">
-            <img src="assets/gallery/gale8.jpg"
-              alt="tatuagem dark ornamento">
+            <img src="assets/gallery/gale8.jpg" alt="tatuagem dark ornamento">
           </a>
         </figure>
 
         <figure class="galeria-item-home">
           <a href="galeria/" aria-label="Ver mais tatuagens de raposa em aquarela e geométricas">
-            <img src="assets/gallery/carro2.jpeg"
-              alt="tatuagem dark ornamento">
+            <img src="assets/gallery/carro2.jpeg" alt="tatuagem dark ornamento">
           </a>
         </figure>
 
         <figure class="galeria-item-home">
           <a href="galeria/" aria-label="Ver mais tatuagens de lobo em aquarela com flores e floresta">
-            <img src="assets/gallery/carro3.jpeg"
-              alt="tatuagem dark ornamento">
+            <img src="assets/gallery/carro3.jpeg" alt="tatuagem dark ornamento">
           </a>
         </figure>
 
         <figure class="galeria-item-home">
           <a href="galeria/" aria-label="Ver mais tatuagens florais em preto e cinza">
-            <img src="assets/gallery/carro4.jpeg"
-              alt="tatuagem dark ornamento">
+            <img src="assets/gallery/carro4.jpeg" alt="tatuagem dark ornamento">
           </a>
         </figure>
       </div>

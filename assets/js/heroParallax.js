@@ -1,28 +1,30 @@
 (() => {
   if (window.innerWidth <= 767) return;
 
-  const hero = document.querySelector('.hero');
-  const heroBg = document.querySelector('.hero-bg');
-  if (!hero || !heroBg) return;
-
-  let heroHeight = 0;
-  let bgHeight = 0;
-
-  function recalcSizes() {
-    heroHeight = hero.offsetHeight;
-    bgHeight = heroBg.offsetHeight;
-  }
+  const sections = document.querySelectorAll('.parallax-section');
+  if (!sections.length) return;
 
   function update() {
-    const start = hero.offsetTop;
     const scrollY = window.scrollY || window.pageYOffset;
-    let progress = (scrollY - start) / heroHeight;
-    progress = Math.min(Math.max(progress, 0), 1);
 
-    const maxShift = bgHeight - heroHeight;
-    const translateY = -progress * maxShift;
+    sections.forEach(section => {
+      // 🔴 MUDA: cada seção controla seu próprio bg
+      const bg = section.querySelector('.hero-bg');
+      if (!bg) return;
 
-    heroBg.style.transform = `translateY(${translateY}px)`;
+      const sectionHeight = section.offsetHeight;
+      const bgHeight = bg.offsetHeight;
+      const viewportOffset = window.innerHeight * 0.6;
+      const start = section.offsetTop - viewportOffset;
+
+      let progress = (scrollY - start) / sectionHeight;
+      progress = Math.min(Math.max(progress, 0), 1);
+
+      const maxShift = bgHeight - sectionHeight;
+      const translateY = -progress * maxShift;
+
+      bg.style.transform = `translateY(${translateY}px)`;
+    });
   }
 
   function onScroll() {
