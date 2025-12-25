@@ -74,7 +74,7 @@
 }
 
 .contatos-items div:last-child {
-  justify-self: end;
+  justify-self: end !important;
 }
 
 .contatos-items .icon {
