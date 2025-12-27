@@ -148,6 +148,15 @@ body {
   padding: 0;
 }
 
+.hero-content a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.hero-content a:hover {
+  text-decoration: none;
+}
+
 .hero-title-home {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 350;
