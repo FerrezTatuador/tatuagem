@@ -126,7 +126,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 0.625rem;
   max-width: 60rem;
-  min-width: 30rem;
+  min-width: 20rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -362,6 +362,10 @@ figcaption {
     padding: 5rem 1rem;
   }
 
+  .galeria-grid-home {
+  grid-template-columns: repeat(2, 1fr);
+}
+
   /* Contatos */
   .contatos-card {
     grid-template-columns: 1fr 1fr;
@@ -520,6 +524,10 @@ figcaption {
     text-align: center;
     color: #F5F5F5;
     -webkit-text-stroke: 1px;
+  }
+
+  .galeria-grid-home {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .faq-content {
