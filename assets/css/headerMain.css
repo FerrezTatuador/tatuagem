@@ -106,12 +106,11 @@ body {
   left: 0;
   width: 100%;
   height: 130%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
   will-change: transform;
   transform: translateY(0);
-  object-fit: cover;
 }
 
 .hero {
@@ -184,6 +183,7 @@ body {
   .hero-bg {
     width: 100%;
     height: 130%;
+    background-size: contain !important;
   }
 }
 
